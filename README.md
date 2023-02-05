@@ -1,6 +1,6 @@
 # :cloud: Enum_AzureSubdomains:
 
-A Metasploit module for enumerating public Azure services, ```enum_azuresubdomains.rb``` will check for valid Azure subdomains, based off of a base word, via DNS. This reconnaissance and enumeration module rapidly identifies API services, storage accounts, key vaults, databases, and more! Expedite your cloud recon with this handy auxiliary module.
+A Metasploit module for enumerating public Azure services, ```enum_azuresubdomains.rb``` will check for valid Azure subdomains via various DNS queries. This reconnaissance and enumeration module rapidly identifies API services, storage accounts, key vaults, databases, and more! Expedite your cloud recon with this handy auxiliary module.
 
 
 <p align="center">
@@ -36,4 +36,41 @@ It may take a while to pay off, but enumerating existing Azure subdomains may be
 
 # Demo:
 
+https://user-images.githubusercontent.com/72598486/216848983-6dd880dd-9549-4a39-8bf8-476a870239c4.mp4
+
+
 # Install:
+
+Download repository:
+
+```
+$ mkdir Enum_Azure
+$ cd Enum_Azure/
+$ sudo git clone https://github.com/RoseSecurity/Enum_AzureSubdomains.git
+```
+
+Usage:
+
+To load the script into Metasploit:
+
+```
+# Create directory for module
+$ mkdir -p ~/.msf4/modules/auxiliary/gather
+# Move script into folder
+$ mv enum_azuresubdomains.rb ~/.msf4/modules/auxiliary/gather
+```
+
+Fire up Metasploit:
+
+```
+$ msfconsole -q
+# Reload modules
+msf> reload_all
+msf> use /modules/auxiliary/gather/enum_azuresubdomains
+```
+
+If you encounter any errors, check the following log:
+
+```
+$ tail ~/.msf4/logs/framework.log
+```
