@@ -62,7 +62,7 @@ class MetasploitModule < Msf::Auxiliary
         for domain in targetdomains do
           begin
           if Resolv.getaddress domain
-            puts "\nDiscovered Target Domain: " + domain
+            puts "\nDiscovered Target Domain: #{domain}"
             dns_get_a(domain) if datastore['ENUM_A']
             dns_get_cname(domain) if datastore['ENUM_CNAME']
             dns_get_ns(domain) if datastore['ENUM_NS']
