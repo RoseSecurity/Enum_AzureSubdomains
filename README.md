@@ -1,15 +1,12 @@
-# :cloud: Enum_AzureSubdomains:
-
-A Metasploit module for enumerating public Azure services, ```enum_azuresubdomains.rb``` will check for valid Azure subdomains via various DNS queries. This reconnaissance and enumeration module rapidly identifies API services, storage accounts, key vaults, databases, and more! Expedite your cloud recon with this handy auxiliary module.
-
+# :cloud: Enum_AzureSubdomains: Anonymously Enumerating Azure Services
 
 <p align="center">
   <img alt="AzureDoggo" src="https://user-images.githubusercontent.com/72598486/216847358-a72ce9e8-7d25-4b27-b386-f21d339580fa.png">
 </p>
 
-# Anonymously Enumerating Azure Services:
+Microsoft makes use of a number of different domains and subdomains for each of their Azure services. From SQL databases to SharePoint drives, each service maps to its respective domain/subdomain, and with the proper toolset, these can be identified through DNS enumeration to yield information about the target domain's infrastructure. ```enum_azuresubdomains.rb``` is a Metasploit module for enumerating public Azure services by validating legitimate subdomains through various DNS record queries. This cloud reconnaissance module rapidly identifies API services, storage accounts, key vaults, databases, and more! Expedite your cloud reconnaissance phases with ```enum_azuresubdomains.rb```.
 
-Microsoft makes use of a number of different domains/subdomains for each of their Azure services. From SQL databases to email and SharePoint drives, each service maps to its respective domain/subdomain, and I have included a list of Azure-related domains below:
+## Domains and Associated Services:
 
 | Domain | Associated Service |
 | --- | --- |
@@ -32,7 +29,7 @@ Microsoft makes use of a number of different domains/subdomains for each of thei
 | search.windows.net | Search Appliance |
 | azure-api.net | API Services |
 
-It may take a while to pay off, but enumerating existing Azure subdomains may be handy for anyone looking to do subdomain takeovers. Subdomain takeovers are usually done the other way around (finding a domain that’s no longer registered/in use), but by finding the domains now, and keeping tabs on them for later, you may be able to monitor for potential subdomain takeovers.
+***NOTE: Enumerating existing Azure subdomains may be handy for anyone looking to conduct subdomain takeovers. Subdomain takeovers are typically done the other way around (finding a domain that’s no longer registered or in use), but by preemptively discovering the domains, and keeping tabs on them for later, you may be able to monitor for potential subdomain takeovers.***
 
 # Demo:
 
@@ -43,8 +40,8 @@ https://user-images.githubusercontent.com/72598486/216850941-ca57fcd9-6208-49c0-
 Download repository:
 
 ```
-$ mkdir Enum_Azure
-$ cd Enum_Azure/
+$ mkdir Enum_AzureSubdomains
+$ cd Enum_AzureSubdomains/
 $ sudo git clone https://github.com/RoseSecurity/Enum_AzureSubdomains.git
 ```
 
@@ -62,10 +59,10 @@ $ mv enum_azuresubdomains.rb ~/.msf4/modules/auxiliary/gather
 Fire up Metasploit:
 
 ```
-$ msfconsole -q
-# Reload modules
-msf> reload_all
-msf> use /modules/auxiliary/gather/enum_azuresubdomains
+# Quietly start Metasploit and reload all modules
+$ msfconsole -q -x 'reload_all'
+# Use module
+msf6> use auxiliary/gather/enum_azuresubdomains
 ```
 
 If you encounter any errors, check the following log:
