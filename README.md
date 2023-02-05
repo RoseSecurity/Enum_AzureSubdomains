@@ -36,8 +36,7 @@ It may take a while to pay off, but enumerating existing Azure subdomains may be
 
 # Demo:
 
-https://user-images.githubusercontent.com/72598486/216848983-6dd880dd-9549-4a39-8bf8-476a870239c4.mp4
-
+https://user-images.githubusercontent.com/72598486/216850941-ca57fcd9-6208-49c0-a78b-317be632c03b.mp4
 
 # Install:
 
