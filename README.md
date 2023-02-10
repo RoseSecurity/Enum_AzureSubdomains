@@ -70,3 +70,10 @@ If you encounter any errors, check the following log:
 ```
 $ tail ~/.msf4/logs/framework.log
 ```
+
+# Development:
+
+If you have any feedback, comments, or recommendations on how to improve this module, feel free to open an issue!
+
+- [ ] Add permutations option for enhanced discovery
+- [ ] Add custom permutations file option 
