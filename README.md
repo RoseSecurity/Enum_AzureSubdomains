@@ -75,5 +75,5 @@ $ tail ~/.msf4/logs/framework.log
 
 If you have any feedback, comments, or recommendations on how to improve this module, feel free to open an issue!
 
-- [ ] Add permutations option for enhanced discovery
+- [x] Add permutations option for enhanced discovery
 - [ ] Add custom permutations file option 
