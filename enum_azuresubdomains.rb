@@ -123,7 +123,7 @@ class MetasploitModule < Msf::Auxiliary
       target_domains = []
       subdomains.each do |tld|
         target_domains.append(domain + tld)
-        permutated_domains.each do |domain|
+        permutated_domains.each do |_subdomain|
           target_domains.append(domain + tld)
         end
       end
